@@ -8,11 +8,12 @@ def callback(queue_name: str, message: bytes):
 img_root = '/Data/Signals/Sat_proj/data/05_04_22dB/images/train'
 img_list = glob.glob(os.path.join(img_root,'*.png'))
 
-consumer = QueueConsumer(host='localhost', port=5672, queues_name=['image'], callback=callback)
-publisher = QueuePublisher('localhost', 5672, "image")
-publisher.push_message(b'hello world 1')
-publisher.push_message(b'hello world 2')
-publisher.push_message(b'hello world 3')
+for img in img_list:
+    consumer = QueueConsumer(host='localhost', port=5672, queues_name=['image'], callback=callback)
+    publisher = QueuePublisher('localhost', 5672, "image")
+    publisher.push_message(img)
+    # publisher.push_message(b'hello world 2')
+    # publisher.push_message(b'hello world 3')
 
 import time
 time.sleep(5)
