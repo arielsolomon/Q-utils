@@ -1,7 +1,7 @@
 import pika
 from typing import List
 from threading import Thread
-import queue_utils._common as _common
+from . import _common
 
 
 class QueueConsumer:
