@@ -1,0 +1,10 @@
+Metadata-Version: 2.1
+Name: queue-utils
+Version: 0.12.0
+Summary: queue-utils encapsulates rabbitMQ
+Home-page: http://pypi.python.org/pypi/PackageName/
+Author: Mighty Mouse
+Author-email: mm@mighty-mouse.com
+License: LICENSE.txt
+
+queue-utils encapsulates rabbitMQ
