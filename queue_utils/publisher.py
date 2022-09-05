@@ -1,5 +1,5 @@
 import pika
-import queue_utils._common as _common
+from . import _common 
 
 
 class QueuePublisher:
